@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <div class="navbar-title">内蒙电信和林云资源池监控系统</div>
+    <div class="navbar-title">vue模板定制演示项目</div>
     <div class="user-operate">
       <div class="user-logo">
         <Icon type="ios-contact" size="30" />
