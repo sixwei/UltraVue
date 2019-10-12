@@ -1,0 +1,51 @@
+{
+  "id": "1447583",
+  "name": "nm-ucoa",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1024088",
+      "name": "setting ",
+      "font_class": "sinaweibo18",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "2632198",
+      "name": "report",
+      "font_class": "report",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "5900225",
+      "name": "alarm",
+      "font_class": "alarm",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "5970313",
+      "name": "desktop",
+      "font_class": "desktop",
+      "unicode": "e817",
+      "unicode_decimal": 59415
+    },
+    {
+      "icon_id": "10223357",
+      "name": "global",
+      "font_class": "global",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "10659416",
+      "name": "home, menu, house, main menu, interface",
+      "font_class": "homemenuhousemainmenuinterface",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}

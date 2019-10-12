@@ -24,7 +24,6 @@ store.commit('SET_APP_MENUS', appRouter.children)
 
 // const whiteList = ['/login', '/403', '/404', '/500'];// 不重定向白名单
 
-
 router.beforeEach((to, from, next) => {
   let agent = navigator.userAgent;
   console.log(agent);

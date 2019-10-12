@@ -3,7 +3,7 @@ export const appRouter = {
     path: '/',
     name: 'root',
     redirect: '/home',
-    component: () => import('../views'),
+    component: () => import('../views/indexCol.vue'),
     meta: {
         menuShow: false
     },

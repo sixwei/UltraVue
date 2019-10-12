@@ -47,6 +47,7 @@ exports.cssLoaders = function (options) {
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
+        publicPath:'../../',  // 20190531 zza
         fallback: 'vue-style-loader'
       })
     } else {

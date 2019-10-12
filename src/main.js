@@ -11,18 +11,15 @@ import VueI18n from 'vue-i18n'
 import messages from './locale'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
-import 'iview/dist/styles/iview.css'; // 导入样式
-// import "./styles/dark/index.less"
 
+
+import './styles/theme.less'
 
 
 Vue.config.productionTip = false
 Vue.use(iView)
 Vue.use(VueI18n)
 Vue.use(VueAxios, axios)
-
-
-// Vue.use(Antd)
 
 window._ = require('lodash')
 window.anime = require('animejs')
@@ -31,7 +28,6 @@ const i18n = new VueI18n({
   locale: 'zh-CN',
   messages
 })
-
 
 /* eslint-disable no-new */
 new Vue({
