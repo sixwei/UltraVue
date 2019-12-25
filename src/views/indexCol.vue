@@ -5,17 +5,17 @@
         <Logo />
         <Menu :active-name="actionname" theme="dark" @on-select="changeMenu">
           <template v-for="item in appmenuconfig">
-            <MenuItem v-if="!item.item&&item.show=='1'" :key="item.id" :name="item.link">
+            <MenuItem v-if="!item.item&&item.show" :key="item.id" :name="item.link">
               <Icon :custom="'iconfont '+item.icon" />
               {{ item.name }}
             </MenuItem>
-            <Submenu v-if="item.item&&item.show=='1'" :name="item.link" :key="item.name">
+            <Submenu v-if="item.item&&item.show" :name="item.link" :key="item.name">
               <template slot="title">
                 <Icon :custom="'iconfont '+item.icon" />
                 <span class="layout-text">{{ item.name }}</span>
               </template>
               <template v-for="child in item.item">
-                <MenuItem :name="child.link" :key="child.id" v-if="child.show=='1'">
+                <MenuItem :name="child.link" :key="child.id" v-if="child.show">
                   <Icon :custom="'iconfont '+item.icon" />
                   {{ child.name }}
                 </MenuItem>
