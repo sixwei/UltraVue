@@ -14,8 +14,7 @@ const RouterConfig = {
 }
 const router = new VueRouter(RouterConfig)
 
-//根据路由解析出菜单
-store.commit('SET_APP_MENUS', appRouter.children)
+
 
 // const token = store.getters.token
 // if(token) { //假如有token，则根据token去取账号，否则跳到登录页面

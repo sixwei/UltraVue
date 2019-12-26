@@ -1,3 +1,7 @@
+import axios from "./http";
+
+import axiosone from "axios"
+
 // 常用方法，关于数据遍历，提取，去重等；
 
 const filterObj = function (sourceObj) {
@@ -22,10 +26,19 @@ const filterObj = function (sourceObj) {
       }
     }
   }
+
+  function getIpConfig(){
+    return new Promise((reslove)=>{
+      axiosone.get('/static/js/ipconfig.json').then(res=>{
+        reslove(res.dev)
+      })
+    }) 
+  }
   
   export default {
     filterObj,
     isValidIP,
-    changeNull2Zero
+    changeNull2Zero,
+    getIpConfig
   };
   

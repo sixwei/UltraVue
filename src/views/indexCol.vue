@@ -4,24 +4,7 @@
       <Sider style="width:200px" id="custom-side">
         <Logo />
         <Menu :active-name="actionname" theme="dark" @on-select="changeMenu">
-          <template v-for="item in appmenuconfig">
-            <MenuItem v-if="!item.item&&item.show" :key="item.id" :name="item.link">
-              <Icon :custom="'iconfont '+item.icon" />
-              {{ item.name }}
-            </MenuItem>
-            <Submenu v-if="item.item&&item.show" :name="item.link" :key="item.name">
-              <template slot="title">
-                <Icon :custom="'iconfont '+item.icon" />
-                <span class="layout-text">{{ item.name }}</span>
-              </template>
-              <template v-for="child in item.item">
-                <MenuItem :name="child.link" :key="child.id" v-if="child.show">
-                  <Icon :custom="'iconfont '+item.icon" />
-                  {{ child.name }}
-                </MenuItem>
-              </template>
-            </Submenu>
-          </template>
+         <side-menu></side-menu>
         </Menu>
       </Sider>
       <Layout class="content-layout">
@@ -41,7 +24,7 @@ import appmenuconfig from "@/utils/AppMenuConfig";
 import Cookie from "js-cookie";
 import ultrafun from "@/utils/ultrafun";
 
-import { AppMain, Navbar, Logo } from "@/layout";
+import { AppMain, Navbar, Logo,SideMenu } from "@/layout";
 
 export default {
   data() {
@@ -50,10 +33,10 @@ export default {
       actionname: "home"
     };
   },
-  components: { Logo, Navbar, AppMain },
+  components: { Logo, Navbar, AppMain,SideMenu },
   mounted() {
 
-     console.log($("#custom-side").width());
+     
   },
   methods: {
     changeMenu(active) {

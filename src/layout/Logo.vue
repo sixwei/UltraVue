@@ -3,6 +3,7 @@
     <transition name="sidebarLogoFade">
       <div  key="expand" class="sidebar-logo-link" >
         <img v-if="logo" :src="logo" class="sidebar-logo">
+        <span>{{title}}</span>
       </div>
     </transition>
   </div>

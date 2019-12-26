@@ -1,16 +1,22 @@
 
 // 测试环境
-const url = 'http://192.168.189.146:58055';
-const nmsw ='http://192.168.189.146:58085';
-const pasm ='http://192.168.189.146:58045';
 
+let ipconfig = ""
+
+if(process.env.NODE_ENV ==='development'){
+  ipconfig = window.ipconfig.dev 
+}else(
+  ipconfig = window.ipconfig.pro
+)
+
+let {url,nmsw,pasm} = ipconfig
+
+console.log(url,nmsw,pasm,'haha')
 // 公用
 const DOMAINPATH = url;
 const BASEPATH = url + '/mv';
 const NMSPATH = nmsw + '/nmsw';
 
-
-import qs from 'qs'
 export default {
 
   domainport: DOMAINPATH,
